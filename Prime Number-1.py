@@ -1,0 +1,25 @@
+#PRİME NUMBERS STARTİNG WİTH 5
+
+#Algorithm to display all prime numbers with 3 digits starting with 5:
+
+#1. Loop through numbers from 500 to 599
+
+#2. For each number, check if it is prime:
+    #a. A prime number is greater than 1 and has no divisors other than 1 and itself.
+    #b. Check divisibility from 2 to the square root of the number.
+
+#3. If the number is prime, print it.
+
+
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+for number in range(500, 600):
+    if is_prime(number):
+        print(number)
